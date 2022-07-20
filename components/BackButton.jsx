@@ -6,7 +6,7 @@ const BackButton = ({navigation}) => {
         navigation.navigate('Profile-Page')
     }
   return (
-    <Pressable onPress={goBack}>
+    <Pressable onPress={goBack} style={{marginLeft: 10}}>
         <Ionicons name="arrow-back" size={24} color="black" />
     </Pressable>
   )

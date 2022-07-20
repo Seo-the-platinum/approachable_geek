@@ -38,6 +38,42 @@ export const globalStyles = StyleSheet.create({
         shadowRadius: 5,
         padding: 20,
         marginTop: 40,
-        width: '80%',
+        width: '85%',
+    },
+
+    editPageHeader: {
+        color: 'black',
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
+
+    editPageInputView: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: 30,
+        width: '100%',
+    },
+
+    editPageInputContainer: {
+        borderColor: '#e5e5e5', 
+        borderWidth: 2,
+        marginTop: 30, 
+        padding: 10,
+        width: '100%',
+    },
+
+    inputHeader: {
+        color: '#aaaaaa',
+        fontWeight: 'bold'
+    },
+
+    inputValue: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginTop: 5, 
+    },
+
+    invalidInput: {
+        color: 'red'
     }
 })

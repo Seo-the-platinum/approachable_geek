@@ -10,7 +10,7 @@ import the_trash_man from '../../assets/images/the_trash_man.jpeg'
 const ProfilePage = ({navigation, route}) => {
   const [ fieldValues, setFieldValues ] = useState(mockData)
   const [ img, setImg ] = useState(the_trash_man)
-
+  
   useEffect(()=> {
     if (route.params?.image) {
       setImg(route.params.image)

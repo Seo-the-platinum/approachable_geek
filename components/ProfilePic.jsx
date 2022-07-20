@@ -10,7 +10,7 @@ const ProfilePic = ({navigation, img}) => {
     }
   return (
     <View style={{alignItems: 'center', width: '100%'}}>
-        <Text style={{color: Colors.blue, fontSize: 25}}>Edit Profile</Text>
+        <Text style={{color: Colors.blue, fontSize: 24}}>Edit Profile</Text>
         <View style={{borderColor: Colors.blue, borderRadius: '70%', overflow:'hidden', height: 140, width: 140, borderWidth: 5, marginTop: 20}}>
             <TouchableWithoutFeedback onPress={toPhotoEdit}>
                 <Image source={typeof img === 'string' ? {uri: img} : img} style={{height: '100%', width: '100%'}}/>

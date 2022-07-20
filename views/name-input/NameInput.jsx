@@ -1,40 +1,55 @@
 import React, { useState } from 'react'
-import { Keyboard, Text, TextInput, TouchableWithoutFeedback, SafeAreaView, View, } from 'react-native';
-import BackButton from '../../components/BackButton'
-import UpdateButton from '../../components/UpdateButton';
+import { Text, TextInput, View, } from 'react-native';
+import EditPage from '../../components/EditPage'
+import { validateName } from '../../utils.js'
+import { INVALID_NAME } from '../../utils';
+import InvalidInput from '../../components/InvalidInput'
+import { globalStyles } from '../../styles';
 
 const NameInput = ({navigation, route}) => {
   const [ first, setFirst ] = useState(route.params.value.split(' ')[0])
   const [ last, setLast ] = useState(route.params.value.split(' ')[1])
+  const [ firstInvalid, setFirstInvalid ] = useState(false)
+  const [ lastInvalid, setLastInvalid ] = useState(false)
+
 
   const toProfile = ()=> {
-    navigation.navigate('Profile-Page', {
-      type: route.params.type, 
-      value: `${first} ${last}`})
-  }
+    if (!validateName(first) && !validateName(last)) {
+      setFirstInvalid(true)
+      setLastInvalid(true)
 
+    } else if (!validateName(first)) {
+      setFirstInvalid(true)
+
+    } else if (!validateName(last)){
+      setLastInvalid(true)
+
+    } else {
+      setFirstInvalid(false)
+      setLastInvalid(false)
+      navigation.navigate('Profile-Page', {
+        type: route.params.type, 
+        value: `${first} ${last}`})
+    }
+  }
+  
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-      <SafeAreaView>
-          <BackButton navigation={navigation}/>
-          <View style={{alignItems:'center'}}>
-            <Text>
-                Whats your name?
-            </Text>
-            <View style={{flexDirection: 'row'}}>
-              <View style={{borderWidth: 1, borderColor: '#aaaaaa', width: '40%'}}>
-                <Text>First Name</Text>
-                <TextInput value={first} onChangeText={setFirst} keyboardType='default'/>
-              </View>
-              <View style={{borderWidth: 1, borderColor: '#aaaaaa', width: '40%'}}>
-                <Text>Last Name</Text>
-                <TextInput value={last} onChangeText={setLast}/>
-              </View>
-            </View>
-            <UpdateButton func={toProfile}/>
-          </View>
-      </SafeAreaView>
-    </TouchableWithoutFeedback>
+    <EditPage navigation={navigation} func={toProfile}>
+      <Text style={globalStyles.editPageHeader}>
+        What's your name?
+      </Text>
+      <View style={[globalStyles.editPageInputView, {flexDirection: 'row',}]}>
+        <View style={[globalStyles.editPageInputContainer, {width: '45%'}]}>
+          <Text style={globalStyles.inputHeader}>First Name</Text>
+          <TextInput value={first} onChangeText={setFirst} style={firstInvalid ? globalStyles.invalidInput : globalStyles.inputValue} />
+        </View>
+        <View style={[globalStyles.editPageInputContainer, {width: '45%'}]}>
+          <Text style={globalStyles.inputHeader}>Last Name</Text>
+          <TextInput value={last} onChangeText={setLast} style={lastInvalid ? globalStyles.invalidInput : globalStyles.inputValue} />
+        </View>
+      </View>
+          {(firstInvalid || lastInvalid) && <InvalidInput error={INVALID_NAME}/>}
+    </EditPage>
   )
 }
 
