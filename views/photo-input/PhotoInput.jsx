@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import BackButton from '../../components/BackButton'
 import * as ImagePicker from 'expo-image-picker';
 import UpdateButton from '../../components/UpdateButton'
+import { globalStyles } from '../../styles'
 
 const PhotoInput = ({navigation, route}) => {
   const { img } = route.params
@@ -23,7 +24,7 @@ const PhotoInput = ({navigation, route}) => {
     }
   };
   return (
-    <SafeAreaView>
+    <SafeAreaView style={ globalStyles.editPageContainer}>
         <BackButton navigation={navigation}/>
         <View style={{alignItems: 'center', marginTop: 20}}>
           <Text style={{fontSize: 24, fontWeight: 'bold'}}>Upload a photo of yourself:</Text>

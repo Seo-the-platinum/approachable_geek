@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View } from 'react-native';
+import { View, } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { mockData } from '../../utils.js'
 import { styles } from './profile-page-styles'
@@ -10,7 +10,7 @@ import the_trash_man from '../../assets/images/the_trash_man.jpeg'
 const ProfilePage = ({navigation, route}) => {
   const [ fieldValues, setFieldValues ] = useState(mockData)
   const [ img, setImg ] = useState(the_trash_man)
-  
+  const [ test, setTest ] = useState('testing...')
   useEffect(()=> {
     if (route.params?.image) {
       setImg(route.params.image)

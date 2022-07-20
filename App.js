@@ -1,7 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { globalStyles } from './styles'
 import ProfilePage from './views/profile-page/ProfilePage'
 import NameInput from './views/name-input/NameInput'
 import EmailInput from './views/email-input/EmailInput'
@@ -12,6 +13,7 @@ import About from './views/about/About'
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  console.log(Platform.OS)
   return (
     <SafeAreaProvider>
       <NavigationContainer>
@@ -29,12 +31,3 @@ export default function App() {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

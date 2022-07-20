@@ -1,11 +1,10 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 export const Colors = {
     blue: `#425dd6`,
 }
 
 export const globalStyles = StyleSheet.create({
-
     editLinkContainer: {
         borderColor: '#aaaaaa',
         borderBottomWidth: 1,
@@ -39,6 +38,12 @@ export const globalStyles = StyleSheet.create({
         padding: 20,
         marginTop: 40,
         width: '85%',
+    },
+
+    editPageContainer: {
+        height: '100%',
+        width: Platform.OS === 'web' ? '40%' : '100%',
+        alignSelf: 'center',
     },
 
     editPageHeader: {

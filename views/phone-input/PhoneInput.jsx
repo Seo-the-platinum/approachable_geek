@@ -31,7 +31,12 @@ const PhoneInput = ({navigation, route}) => {
       </Text>
       <View style={globalStyles.editPageInputContainer}>
         <Text style={globalStyles.inputHeader}>Your Phone Number</Text>
-        <TextInput keyboardType='number-pad' onChangeText={setNumber} onFocus={clearPreview} maxLength={10} value={number} style={invalid ? globalStyles.invalidInput: globalStyles.inputValue}/>
+        <TextInput 
+          keyboardType='number-pad' 
+          onChangeText={setNumber} 
+          onFocus={clearPreview} 
+          maxLength={10} 
+          value={number} style={invalid ? globalStyles.invalidInput: globalStyles.inputValue}/>
       </View>
         {invalid && <InvalidInput error={INVALID_PHONE}/>}
     </EditPage>

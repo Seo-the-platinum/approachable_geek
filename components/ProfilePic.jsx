@@ -17,7 +17,7 @@ const ProfilePic = ({navigation, img}) => {
             </TouchableWithoutFeedback>
         </View>
         <View style={{
-            alignItems: 'center', 
+            alignItems: 'center',
             justifyContent: 'center',
             backgroundColor: 'white', 
             borderRadius: '50%',
