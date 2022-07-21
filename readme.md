@@ -1,6 +1,6 @@
 # Setup
 
-1. Clone the repository and cd into it.
+1. Clone the repository and cd into it. [clone link](https://github.com/Seo-the-platinum/approachable_geek.git)
 
 2. Run **npm install** from within the repo to install all dependencies. If you do not have npm, it is included when you download **Node.js** [download here](https://nodejs.org/en/download/)
 
@@ -27,3 +27,5 @@ the same wifi network as the computer you are running the project from or else e
 that your wifi network is set to private because it could prevent the app from connecting.
 
 3. **optional** If you went with emulators, the terminal will prompt you to press a for **Android**, i for **Ios**, and w for **Web**.
+
+![alt text](./assets/images/Screen%20Shot%202022-07-20%20at%2010.46.35%20PM.png)
