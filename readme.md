@@ -5,7 +5,8 @@
 2. Run **npm install** from within the repo to install all dependencies. If you do not have npm, it is included when you download **Node.js** [download here](https://nodejs.org/en/download/)
 
 3. while the install is in progress, the terminal will ask if you would like to install the expo-cli
-globally. If you prefer just a local install, go to the [expo docs](https://docs.expo.dev/get-started/installation/)
+globally. If you prefer just a local install, go to the [expo docs](https://docs.expo.dev/get-started/installation/). **Note** the expo docs
+say that you have to login after installing expo, however, I did not need to install to run the app.
 
 4. The expo client can run the app on web, ios, and android. Web comes as an option by default and expo will open
 the app in the browswer. For mobile views, there are 2 options. Emulators/simulators or the expo go app. Expo go 
