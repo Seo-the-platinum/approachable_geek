@@ -1,6 +1,6 @@
 # Setup
 
-1. Clone the repository and cd into it. [clone link](https://github.com/Seo-the-platinum/approachable_geek.git)
+1. Clone the repository and cd into it. Repo link: [https://github.com/Seo-the-platinum/approachable_geek.git](https://github.com/Seo-the-platinum/approachable_geek.git)
 
 2. Run **npm install** from within the repo to install all dependencies. If you do not have npm, it is included when you download **Node.js** [download here](https://nodejs.org/en/download/)
 
