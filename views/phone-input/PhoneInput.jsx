@@ -10,6 +10,8 @@ const PhoneInput = ({navigation, route}) => {
   const [ number, setNumber ] = useState(route.params.value)
   const [ invalid, setInvalid ] = useState(false)
 
+  //checks length of number entered and makes sure we send a 10 digit number.
+  //sends data using react-navigation
   const toProfile = ()=> {
     if (number.length !== 10) {
       setInvalid(true)
@@ -35,7 +37,7 @@ const PhoneInput = ({navigation, route}) => {
           keyboardType='number-pad' 
           onChangeText={setNumber} 
           onFocus={clearPreview} 
-          maxLength={10} 
+          maxLength={route.params.value === number ? 14 : 10} 
           value={number} style={invalid ? globalStyles.invalidInput: globalStyles.inputValue}/>
       </View>
         {invalid && <InvalidInput error={INVALID_PHONE}/>}

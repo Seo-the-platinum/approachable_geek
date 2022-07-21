@@ -14,7 +14,6 @@ const EmailInput = ({navigation, route}) => {
     if (!validateEmail(email)) {
       setInvalid(true)
     } else {
-      setInvalid(false)
       navigation.navigate('Profile-Page',{
         type: route.params.type,
         value: email,

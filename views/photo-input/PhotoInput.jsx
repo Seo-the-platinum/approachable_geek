@@ -8,8 +8,9 @@ import { globalStyles } from '../../styles'
 
 const PhotoInput = ({navigation, route}) => {
   const { img } = route.params
+  
+  //image picker tool to upload photo, triggers when update button is pressed
   const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
       allowsEditing: true,
@@ -17,11 +18,10 @@ const PhotoInput = ({navigation, route}) => {
       quality: 1,
     });
 
-    console.log(result);
-
     if (!result.cancelled) {
       navigation.navigate('Profile-Page', {image: result.uri})
     }
+
   };
   return (
     <SafeAreaView style={ globalStyles.editPageContainer}>

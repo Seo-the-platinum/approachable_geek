@@ -10,53 +10,21 @@ export const globalStyles = StyleSheet.create({
         borderBottomWidth: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        paddingBottom: 15,
         marginBottom: 10,
-    },
-
-    fieldHeader: {
-        color: '#aaaaaa',
-        fontFamily: 'Helvetica',
-        fontSize: 12,
-        fontWeight: 'bold',
-        marginBottom: 5,
-    },
-
-    fieldText: {
-        fontFamily: 'Helvetica',
-        fontSize: 12,
-        fontWeight: 'bold',
-    },
-
-    updateButton: {
-        alignItems: 'center',
-        backgroundColor: 'black',
-        shadowColor: '#171717',
-        shadowOffset: {width: -2, height: 5},
-        shadowOpacity: 0.5,
-        shadowRadius: 5,
-        padding: 20,
-        marginTop: 40,
-        width: '85%',
+        paddingBottom: 15,
     },
 
     editPageContainer: {
-        height: '100%',
-        width: Platform.OS === 'web' ? '40%' : '100%',
         alignSelf: 'center',
+        height: '100%',
+        marginTop: Platform.OS === 'web' ? 40 : 0,
+        width: Platform.OS === 'web' ? '40%' : '100%',
     },
 
     editPageHeader: {
         color: 'black',
         fontSize: 24,
         fontWeight: 'bold'
-    },
-
-    editPageInputView: {
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginTop: 30,
-        width: '100%',
     },
 
     editPageInputContainer: {
@@ -67,18 +35,49 @@ export const globalStyles = StyleSheet.create({
         width: '100%',
     },
 
+    editPageInputView: {
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginTop: 30,
+        width: '100%',
+    },
+
+    fieldHeader: {
+        color: '#aaaaaa',
+        fontSize: 12,
+        fontWeight: 'bold',
+        marginBottom: 5,
+    },
+
+    fieldText: {
+        fontSize: 12,
+        fontWeight: 'bold',
+    },
+
     inputHeader: {
         color: '#aaaaaa',
         fontWeight: 'bold'
     },
-
+    
     inputValue: {
         fontSize: 16,
         fontWeight: 'bold',
         marginTop: 5, 
     },
-
+    
     invalidInput: {
         color: 'red'
-    }
+    },
+
+    updateButton: {
+        alignItems: 'center',
+        backgroundColor: 'black',
+        marginTop: 40,
+        padding: 20,
+        shadowColor: '#171717',
+        shadowOffset: {width: -2, height: 5},
+        shadowOpacity: 0.5,
+        shadowRadius: 5,
+        width: '85%',
+    },
 })

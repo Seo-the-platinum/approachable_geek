@@ -1,5 +1,6 @@
 import React from 'react'
-import { Keyboard, Platform, Text, TouchableWithoutFeedback, SafeAreaView, View, } from 'react-native';
+import { Keyboard, Platform, Text, TouchableWithoutFeedback, View, } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context'
 import BackButton from './BackButton'
 import UpdateButton from './UpdateButton';
 import { globalStyles } from '../styles';

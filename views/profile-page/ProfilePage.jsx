@@ -10,7 +10,11 @@ import the_trash_man from '../../assets/images/the_trash_man.jpeg'
 const ProfilePage = ({navigation, route}) => {
   const [ fieldValues, setFieldValues ] = useState(mockData)
   const [ img, setImg ] = useState(the_trash_man)
-  const [ test, setTest ] = useState('testing...')
+
+  //after updating a field, user will be redirected to this page.
+  //the useEffect will collect data sent from whichever page was just changed
+  //and updates the data.
+  
   useEffect(()=> {
     if (route.params?.image) {
       setImg(route.params.image)

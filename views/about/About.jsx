@@ -31,8 +31,8 @@ const About = ({navigation, route}) => {
           Write a little bit about yourself. Do you like Chatting? Are you a smoker? Do you bring pets with you? Etc.
         </Text>
         <TextInput onChangeText={setAbout} maxLength={200} multiline={true} style={ Platform.OS === 'web' ? styles.inputValue : globalStyles.inputValue } value={about}/>
-        { invalid && <InvalidInput error={INVALID_ABOUT}/>}
       </View>
+        { invalid && <InvalidInput error={INVALID_ABOUT}/>}
     </EditPage>
   )
 }

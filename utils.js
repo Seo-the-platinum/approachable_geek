@@ -7,7 +7,10 @@ export  const mockData = [
    {value: 'Frank Reynolds', type: 'Name'},
    {value: '(208) 206-5039', type: 'Phone'},
    {value: 'wolfCola@gmail.com', type: 'Email'},
-   {value: 'Hi my name is Mica Smith. I am from Mesa but go to school in Salt Lake City. I make this drive all the time and have plenty', type: 'About'}
+   {
+    value: `Hi, I'm Frank Reynolds, owner and CEO of wolfcola. I aslo own a bar called Paddy's Pub.I spend a lot of time hanging out under bridges because you can find a lot of good stuff`,
+    type: 'About'
+  }
 ]
 
 export const phoneNumberFormatter = (num)=> {

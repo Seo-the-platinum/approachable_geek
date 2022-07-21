@@ -12,7 +12,9 @@ const NameInput = ({navigation, route}) => {
   const [ firstInvalid, setFirstInvalid ] = useState(false)
   const [ lastInvalid, setLastInvalid ] = useState(false)
 
-
+  //checks that first and last name inputs only contain letters.
+  //If not, update invalid states to alert user, if so, go back to profile
+  //with updated data.
   const toProfile = ()=> {
     if (!validateName(first) && !validateName(last)) {
       setFirstInvalid(true)

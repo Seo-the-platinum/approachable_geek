@@ -3,7 +3,7 @@ import { Colors } from '../../styles.js'
 
 export const styles = StyleSheet.create({
     container: {
-        alignSelf: Platform.OS === 'web' && 'center',
+        alignSelf: Platform.OS === 'web' ? 'center' : 'auto',
         alignItems: 'center',
         height: '100%',
         paddingTop: 50,
